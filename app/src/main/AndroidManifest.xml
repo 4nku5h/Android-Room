@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Fragment_Main.ListFrag" />
-        <activity android:name=".Fragment_Main.Frag1"></activity>
+        <activity android:name=".Fragment_Main.Frag1" />
+        <activity android:name=".FragmentDelete.FragDelete"></activity>
     </application>
 
 </manifest>

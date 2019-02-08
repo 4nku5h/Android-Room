@@ -9,16 +9,20 @@
     tools:context=".Fragment_Main.Frag1">
 
     <EditText
+        android:id="@+id/tv_id"
+        android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:hint="id" />
 
     <EditText
+        android:id="@+id/tv_name"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:hint="name" />
 
     <EditText
+        android:id="@+id/tv_email"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:hint="email" />
@@ -27,8 +31,22 @@
         android:id="@+id/clicked"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:background="@android:color/holo_orange_dark"
-        android:text="Button" />
+        android:text="Save" />
+
+    <Button
+        android:id="@+id/btn_Get"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_orange_dark"
+        android:text="Get" />
+
+    <TextView
+        android:id="@+id/tv_showdata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
 
 
 </LinearLayout>
