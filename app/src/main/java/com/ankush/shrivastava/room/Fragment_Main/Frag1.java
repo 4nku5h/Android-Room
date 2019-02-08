@@ -45,11 +45,13 @@ public class Frag1 extends Fragment{
             @Override
             public void onClick(View v) {
                 List<User_Entity> users=MainActivity.myDatabase.my_dao().getUser();
-
+                String result="";
                 for(User_Entity user:users){
-                    tv_showData.setText(String.format("Id:%d \n Name:%s \n Email:%s",user.getId(),user.getName(),user.getEmail()));
-                    break;// use list view to show all data
+                    result+=(String.format(" \n Id:%d \n Name:%s \n Email:%s",user.getId(),user.getName(),user.getEmail()));
+                    // use list view to show all data
                 }
+                tv_showData.setText(result);
+
             }
         });
 

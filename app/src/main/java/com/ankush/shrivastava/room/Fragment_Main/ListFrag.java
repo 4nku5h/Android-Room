@@ -36,7 +36,7 @@ public class ListFrag extends ListFragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        String[] arr={"add","remove"};
+        String[] arr={"add","remove","Update"};
         setListAdapter(new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,arr));
         return inflater.inflate(R.layout.activity_main2,container,false);
     }

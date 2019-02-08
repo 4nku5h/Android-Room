@@ -6,14 +6,14 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
-import android.app.Fragment;
 
 import com.ankush.shrivastava.room.DataBase.MyDatabase;
 import com.ankush.shrivastava.room.DataBase.My_Dao;
 import com.ankush.shrivastava.room.DataBase.User_Entity;
-import com.ankush.shrivastava.room.FragmentDelete.FragDelete;
+import com.ankush.shrivastava.room.Delete.FragDelete;
 import com.ankush.shrivastava.room.Fragment_Main.Frag1;
 import com.ankush.shrivastava.room.Fragment_Main.ListFragListener;
+import com.ankush.shrivastava.room.Update.FragmentUpdate;
 
 import java.util.List;
 
@@ -55,6 +55,13 @@ public class MainActivity extends AppCompatActivity implements ListFragListener,
                 ft.commit();
                 break;
             }
+            case 2: {
+                FragmentUpdate fraUpdate=new FragmentUpdate();
+                FragmentTransaction ft=fm.beginTransaction();
+                ft.replace(R.id.frag1,fraUpdate);
+                ft.commit();
+
+            }
 
         }
 
@@ -73,6 +80,11 @@ public class MainActivity extends AppCompatActivity implements ListFragListener,
 
     @Override
     public void delete(User_Entity user) {
+
+    }
+
+    @Override
+    public void Update(User_Entity user) {
 
     }
 }
